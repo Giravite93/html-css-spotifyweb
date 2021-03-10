@@ -193,12 +193,14 @@ a {
 	color: #555555;
 	font-size: 12px;
 }
-.content .title_content ul li:hover a .box,
-.content .title_content ul .active a .box {
+.content .title_content ul li:hover a::after,
+.content .title_content ul .active a::after {
+	content: "";
 	border-top: 2px solid green;
 	width: 35%;
 	margin: auto;
 	margin-top: 5px;
+	display: block;
 }
 
 /*Footer*/
