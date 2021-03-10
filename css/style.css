@@ -43,6 +43,7 @@ a {
 	background-color: black;
 	padding-right: 20px;
 	width: 180px;
+	overflow: hidden;
 }
 
 /*Logo*/
@@ -97,18 +98,30 @@ a {
 	padding-left: 10px;
 	padding-top: 20px;
 	flex-grow: 1;
+	overflow: hidden;
+	min-height: 150px;
 }
 .playlist .title-playlist {
 	color: white;
 	padding-bottom: 10px;
 }
 
-.square i {
+.playlist .square i {
 	line-height: 30px;
+}
+.playlist_content {
+	height: 100%;
+}
+.made-playlist {
+	height: 100%;
+	overflow-y: auto;
 }
 .made-playlist .new_list {
 	color: #555555;
 	font-size: 13px;
+}
+.made-playlist .new_list a {
+	color: inherit;
 }
 .made-playlist .new_list li {
 	padding: 5px 0;
@@ -120,10 +133,19 @@ a {
 	color: #555555;
 	padding-left: 5px;
 }
+/*Scroll bar playlist*/
+.made-playlist::-webkit-scrollbar {
+	width: 3px;
+	background-color: #555555;
+}
+.made-playlist::-webkit-scrollbar-thumb {
+	background-color: white;
+}
 
 /*Install and Profile*/
 .install-profile {
 	padding-left: 5px;
+	padding-bottom: 5px;
 }
 .install-profile .download-app {
 	padding-bottom: 10px;
@@ -142,12 +164,17 @@ a {
 .install-profile .square {
 	border-radius: 50%;
 	overflow: hidden;
+	vertical-align: middle;
 }
 .install-profile .square img {
 	width: 30px;
 }
 .install-profile .profile {
 	margin-top: 10px;
+}
+.install-profile .profile span {
+	color: white;
+	padding-left: 5px;
 }
 
 /*Content*/
