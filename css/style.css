@@ -271,6 +271,9 @@ img {
 	margin-top: 5px;
 	display: block;
 }
+.content .title_content ul .active {
+	color: white;
+}
 
 /*Popular Artist*/
 .popular-artist .song_content img {
