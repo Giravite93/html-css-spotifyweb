@@ -44,12 +44,15 @@ img {
 	padding: 40px 0;
 }
 
+.content_section.flex-display {
+	justify-content: space-around;
+}
 .content_section {
 	text-align: center;
 }
 .song_content {
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	color: white;
 }
 .song_content img {
