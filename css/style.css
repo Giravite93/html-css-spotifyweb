@@ -1,0 +1,181 @@
+/*RESET*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*COMMON*/
+body {
+	min-height: 350px;
+	font-family: "Circular Spotify Tx T Black", Arial, Helvetica, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.square {
+	width: 30px;
+	height: 30px;
+	background-color: #555555;
+	text-align: center;
+	display: inline-block;
+}
+
+.flex-display {
+	display: flex;
+}
+/*Wrap App*/
+.app-wrapper {
+	width: 100%;
+	height: calc(100vh - 80px);
+	background-color: #141922;
+}
+
+/*Side-Bar*/
+.side-bar {
+	height: 100%;
+	background-color: black;
+	padding-right: 20px;
+	width: 180px;
+}
+
+/*Logo*/
+.side-bar .inner_side-bar .logo {
+	text-align: center;
+	padding: 5px 0;
+}
+.side-bar .inner_side-bar .logo img {
+	width: 132px;
+	padding: 10px;
+}
+
+/*Menu*/
+.side-bar .inner_side-bar .menu .menu-list img {
+	opacity: 0.3;
+	width: 30px;
+	vertical-align: middle;
+}
+.side-bar .inner_side-bar .menu .menu-list span {
+	color: #555555;
+	padding-left: 5px;
+	font-size: 14px;
+}
+.side-bar .inner_side-bar .menu .menu-list li {
+	padding: 5px 10px;
+}
+.side-bar .inner_side-bar {
+	flex-direction: column;
+}
+.side-bar .inner_side-bar {
+	height: 100%;
+}
+
+/*Hover and Active*/
+.side-bar .inner_side-bar .menu .menu-list li:hover {
+	border-left: 2px solid green;
+	padding: 5px 8px;
+}
+.side-bar .inner_side-bar .menu .menu-list .active {
+	border-left: 2px solid green;
+	padding: 5px 8px;
+}
+.side-bar .inner_side-bar .menu .menu-list .active span {
+	color: white;
+}
+.side-bar .inner_side-bar .menu .menu-list .active img {
+	opacity: 1;
+}
+
+/*Playlist*/
+.playlist {
+	padding-left: 10px;
+	padding-top: 20px;
+	flex-grow: 1;
+}
+.playlist .title-playlist {
+	color: white;
+	padding-bottom: 10px;
+}
+
+.square i {
+	line-height: 30px;
+}
+.made-playlist .new_list {
+	color: #555555;
+	font-size: 13px;
+}
+.made-playlist .new_list li {
+	padding: 5px 0;
+}
+.made-playlist .new_list li:first-child {
+	margin-top: 10px;
+}
+.made-playlist span {
+	color: #555555;
+	padding-left: 5px;
+}
+
+/*Install and Profile*/
+.install-profile {
+	padding-left: 5px;
+}
+.install-profile .download-app {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #555555;
+}
+.install-profile .download-app img {
+	width: 20px;
+	vertical-align: middle;
+	opacity: 0.3;
+}
+.install-profile .download-app span {
+	color: #555555;
+	padding-left: 5px;
+	font-size: 12px;
+}
+.install-profile .square {
+	border-radius: 50%;
+	overflow: hidden;
+}
+.install-profile .square img {
+	width: 30px;
+}
+.install-profile .profile {
+	margin-top: 10px;
+}
+
+/*Content*/
+.content {
+	flex-grow: 1;
+	height: 100%;
+}
+
+/*Footer*/
+footer {
+	height: 80px;
+	background-color: #282828;
+}
+
+/*MEDIA QUERY*/
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
