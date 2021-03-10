@@ -10,6 +10,9 @@ body {
 	min-height: 350px;
 	font-family: "Circular Spotify Tx T Black", Arial, Helvetica, sans-serif;
 }
+body::-webkit-scrollbar {
+	display: none;
+}
 
 ul {
 	list-style-type: none;
@@ -18,6 +21,10 @@ ul {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+img {
+	width: 100%;
 }
 
 .square {
@@ -31,6 +38,34 @@ a {
 .flex-display {
 	display: flex;
 }
+
+.title-section {
+	color: white;
+	padding: 40px 0;
+}
+
+.content_section {
+	text-align: center;
+}
+.song_content {
+	width: 200px;
+	height: 200px;
+	color: white;
+}
+.song_content img {
+	object-fit: contain;
+	height: 100%;
+	width: auto;
+}
+.song_content .title_song {
+	padding-top: 10px;
+}
+.song_content .title_song p {
+	color: #555555;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
 /*Wrap App*/
 .app-wrapper {
 	width: 100%;
@@ -181,6 +216,17 @@ a {
 	flex-grow: 1;
 	height: 100%;
 	padding-top: 70px;
+	padding-left: 50px;
+	padding-right: 50px;
+	overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+	width: 3px;
+	background-color: #555555;
+}
+.content::-webkit-scrollbar-thumb {
+	background-color: white;
 }
 
 /*Title Content*/
@@ -202,6 +248,8 @@ a {
 	margin-top: 5px;
 	display: block;
 }
+
+/*Recently Played*/
 
 /*Footer*/
 footer {
