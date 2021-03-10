@@ -38,6 +38,12 @@ img {
 .flex-display {
 	display: flex;
 }
+.flex-start {
+	justify-content: flex-start;
+}
+.space-around {
+	justify-content: space-around;
+}
 
 .title-section {
 	color: white;
@@ -45,7 +51,7 @@ img {
 }
 
 .content_section.flex-display {
-	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .content_section {
 	text-align: center;
@@ -63,10 +69,16 @@ img {
 .song_content .title_song {
 	padding-top: 10px;
 }
-.song_content .title_song p {
+.song_content .title_song p,
+.title-section p {
 	color: #555555;
 	font-size: 12px;
 	padding-top: 5px;
+}
+
+.create-for-u .song_content,
+.popular-artist .song_content {
+	margin-right: 25px;
 }
 
 /*Wrap App*/
@@ -252,7 +264,10 @@ img {
 	display: block;
 }
 
-/*Recently Played*/
+/*Popular Artist*/
+.popular-artist .song_content img {
+	border-radius: 50%;
+}
 
 /*Footer*/
 footer {
@@ -264,6 +279,10 @@ footer {
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+	/*Song Content*/
+	.song_content {
+		margin-bottom: 100px;
+	}
 }
 
 /*Medium devices (tablets, 768px and up)*/
