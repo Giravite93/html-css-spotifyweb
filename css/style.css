@@ -17,6 +17,7 @@ ul {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 .square {
@@ -120,9 +121,7 @@ a {
 	color: #555555;
 	font-size: 13px;
 }
-.made-playlist .new_list a {
-	color: inherit;
-}
+
 .made-playlist .new_list li {
 	padding: 5px 0;
 }
@@ -161,9 +160,6 @@ a {
 	padding-left: 5px;
 	font-size: 12px;
 }
-.install-profile .download-app a {
-	color: inherit;
-}
 .install-profile .square {
 	border-radius: 50%;
 	overflow: hidden;
@@ -184,6 +180,25 @@ a {
 .content {
 	flex-grow: 1;
 	height: 100%;
+	padding-top: 70px;
+}
+
+/*Title Content*/
+.content .title_content ul {
+	text-align: center;
+}
+.content .title_content ul li {
+	display: inline-block;
+	padding: 0 10px;
+	color: #555555;
+	font-size: 12px;
+}
+.content .title_content ul li:hover a .box,
+.content .title_content ul .active a .box {
+	border-top: 2px solid green;
+	width: 35%;
+	margin: auto;
+	margin-top: 5px;
 }
 
 /*Footer*/
