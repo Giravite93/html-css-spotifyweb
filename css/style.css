@@ -99,7 +99,7 @@ a {
 	padding-top: 20px;
 	flex-grow: 1;
 	overflow: hidden;
-	min-height: 150px;
+	min-height: 90px;
 }
 .playlist .title-playlist {
 	color: white;
@@ -160,6 +160,9 @@ a {
 	color: #555555;
 	padding-left: 5px;
 	font-size: 12px;
+}
+.install-profile .download-app a {
+	color: inherit;
 }
 .install-profile .square {
 	border-radius: 50%;
