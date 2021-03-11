@@ -23,7 +23,8 @@
 				<div class="inner_side-bar flex-display">
 					<!--Logo-->
 					<div class="logo">
-						<img src="img/logo.svg" alt="Logo" />
+						<img class="logo-normal" src="img/logo.svg" alt="Logo" />
+						<img class="logo-small" src="img/logo-small.svg" alt="Logo" />
 					</div>
 					<!--Menu-->
 					<div class="menu">
@@ -56,8 +57,10 @@
 						<div class="playlist_content">
 							<div class="title-playlist">PLAYLIST</div>
 							<div class="made-playlist">
-								<div class="square"><i class="fas fa-plus"></i></div>
-								<span>Crea Playlist</span>
+								<div class="make-playlist">
+									<div class="square"><i class="fas fa-plus"></i></div>
+									<span>Crea Playlist</span>
+								</div>
 								<ul class="new_list">
 									<li><a href="#">Nuova Lista</a></li>
 									<li><a href="#">Nuova Lista</a></li>
@@ -219,7 +222,7 @@
 		<!--End Wrap App-->
 		<!--Footer-->
 		<footer>
-			<div class="footer_inner flex-display space-between">
+			<div class="footer_inner flex-display">
 				<!--Listen Song-->
 				<div class="listen-song">
 					<img src="img/sinister.jpeg" alt="Sinister" />
@@ -237,7 +240,7 @@
 					<div class="control-section-song flex-display">
 						<i class="fas fa-random"></i>
 						<i class="fas fa-step-backward"></i>
-						<i class="far fa-play-circle"></i>
+						<i class="far fa-play-circle play"></i>
 						<i class="fas fa-step-forward"></i>
 						<i class="fas fa-redo-alt"></i>
 					</div>
@@ -248,7 +251,16 @@
 					</div>
 				</div>
 				<!--Right control Song-->
-				<div class="right-controls-song">controlli</div>
+				<div class="right-controls-song">
+					<a href="#"><i class="fas fa-list-ul"></i></a>
+					<a href="#"><i class="fas fa-desktop"></i></a>
+					<a href="#"><i class="fas fa-volume-up"></i></a>
+					<div class="progress-bar">
+						<div class="base-progress-bar">
+							<div class="progress-bar-colored"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!--End Footer-->
