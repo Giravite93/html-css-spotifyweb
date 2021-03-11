@@ -92,7 +92,7 @@ img {
 	height: 7px;
 	background-color: #555555;
 	border-radius: 15px;
-	width: 85%;
+	width: 75%;
 	display: inline-block;
 }
 .progress-bar-colored {
@@ -416,8 +416,8 @@ footer .footer_inner.flex-display {
 
 /*MEDIA QUERY*/
 
-/* Small devices (landscape phones, 576px and up)*/
-@media screen and (min-width: 320px) and (max-width: 992px) {
+/* Small devices */
+@media screen and (min-width: 420px) and (max-width: 992px) {
 	/*Side-bar*/
 
 	/*Logo*/
@@ -475,7 +475,9 @@ footer .footer_inner.flex-display {
 
 	/*Content*/
 	/*Title Content*/
-
+	.content .title_content ul li {
+		padding: 7px 4px;
+	}
 	.title-section {
 		text-align: center;
 	}
