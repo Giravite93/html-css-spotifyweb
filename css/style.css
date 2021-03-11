@@ -568,7 +568,7 @@ footer .footer_inner.flex-display {
 		content: "0:25";
 		font-size: 12px;
 		color: white;
-		padding-right: 10px;
+		display: block;
 	}
 	.player_song .progress-bar {
 		max-width: 80%;
