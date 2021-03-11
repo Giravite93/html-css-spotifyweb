@@ -62,13 +62,43 @@ img {
 	text-align: center;
 }
 .song_content {
-	width: 250px;
-	height: 250px;
+	max-width: 250px;
 	color: white;
-	cursor: pointer;
 	margin-bottom: 100px;
 }
-.song_content img {
+.img_container {
+	width: 250px;
+	height: 250px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.img_container:hover::after {
+	content: "\f04b";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	line-height: 250px;
+	font-size: 50px;
+	animation-name: top_down;
+	animation-duration: 1s;
+	width: 250px;
+	height: 250px;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+}
+/*Animation*/
+@keyframes top_down {
+	from {
+		top: -250px;
+	}
+	to {
+		top: 0;
+	}
+}
+
+.img_container img {
 	object-fit: contain;
 	height: 100%;
 	width: auto;
@@ -324,8 +354,9 @@ img {
 }
 
 /*Popular Artist*/
-.popular-artist .song_content img {
+.popular-artist .song_content .img_container {
 	border-radius: 50%;
+	overflow: hidden;
 }
 
 /*Footer*/
