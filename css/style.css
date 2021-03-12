@@ -160,25 +160,10 @@ img {
 .side-bar {
 	height: 100%;
 	background-color: black;
-	padding-right: 5px;
-	width: 180px;
 	overflow: hidden;
 	flex-shrink: 0.8;
 	position: relative;
 	z-index: 1;
-}
-
-/*Logo*/
-.side-bar .inner_side-bar .logo {
-	text-align: center;
-	padding: 5px 0;
-}
-.side-bar .inner_side-bar .logo .logo-small {
-	display: none;
-}
-.side-bar .inner_side-bar .logo .logo-normal {
-	width: 132px;
-	padding: 10px;
 }
 
 /*Menu*/
@@ -230,7 +215,6 @@ img {
 }
 .playlist .title-playlist {
 	color: white;
-	padding-bottom: 10px;
 }
 .playlist .square i {
 	line-height: 30px;
@@ -273,7 +257,6 @@ img {
 
 /*Install and Profile*/
 .install-profile {
-	padding-left: 5px;
 	padding-bottom: 5px;
 }
 .install-profile .download-app {
@@ -281,7 +264,6 @@ img {
 	border-bottom: 2px solid #555555;
 }
 .install-profile .download-app img {
-	width: 20px;
 	vertical-align: middle;
 	opacity: 0.3;
 }
@@ -416,8 +398,6 @@ footer .footer_inner.flex-display {
 	cursor: pointer;
 }
 .player_song .progress-bar {
-	margin-top: 1%;
-	max-width: 53%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -429,15 +409,9 @@ footer .footer_inner.flex-display {
 	color: white;
 	padding-right: 10px;
 }
-.player_song .progress-bar::after {
-	content: "3:50";
-	padding-left: 10px;
-	padding-right: 0;
-}
 
 /*Right Control Song*/
 .right-controls-song .progress-bar {
-	display: inline-block;
 	width: 100px;
 }
 .right-controls-song i {
@@ -472,20 +446,42 @@ footer .footer_inner.flex-display {
 }
 
 /*MEDIA QUERY*/
-
-/* Small devices */
-@media screen and (min-width: 320px) and (max-width: 992px) {
-	/*Side-bar*/
+/*Very Small devices*/
+@media (min-width: 320px) {
+	/*Sidebar*/
+	.side-bar {
+		width: 80px;
+		padding: 0;
+	}
+	.side-bar:hover {
+		width: 180px;
+		transition: width 1s ease-in-out;
+		-webkit-transition: width 1s ease-in-out;
+	}
+	.side-bar .inner_side-bar .menu,
+	.side-bar .inner_side-bar .playlist,
+	.side-bar .inner_side-bar .install-profile {
+		display: none;
+	}
+	.side-bar:hover .inner_side-bar .menu,
+	.side-bar:hover .inner_side-bar .playlist,
+	.side-bar:hover .inner_side-bar .install-profile {
+		display: block;
+	}
 
 	/*Logo*/
+	.side-bar .inner_side-bar .logo {
+		padding: 0;
+	}
 	.side-bar .inner_side-bar .logo .logo-normal {
 		display: none;
 	}
 	.side-bar .inner_side-bar .logo .logo-small {
-		width: 60px;
-		padding: 10px;
+		max-width: 100%;
+		min-width: 20px;
 		display: block;
 		margin: auto;
+		padding: 5px 4px;
 	}
 
 	/*Menu*/
@@ -497,20 +493,30 @@ footer .footer_inner.flex-display {
 	}
 
 	/*Playlist*/
+	.playlist {
+		padding-left: 0;
+	}
 	.playlist .title-playlist {
 		font-size: 10px;
-		color: white;
-		padding-bottom: 10px;
+		padding-bottom: 0;
 		text-align: center;
 	}
 	.playlist .playlist_content .made-playlist .make-playlist {
 		text-align: center;
+		padding: 10px 0;
 	}
 	.playlist .playlist_content .made-playlist .make-playlist span {
 		display: none;
 	}
 
+	.made-playlist .new_list {
+		text-align: center;
+	}
+
 	/*Download App*/
+	.install-profile {
+		padding-left: 0;
+	}
 	.install-profile .download-app {
 		text-align: center;
 		padding: 0;
@@ -532,22 +538,33 @@ footer .footer_inner.flex-display {
 
 	/*Content*/
 	/*Title Content*/
+	.content {
+		overflow-x: hidden;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 	.content .title_content ul li {
-		padding: 7px 4px;
+		padding-bottom: 7px;
+		display: block;
 	}
 	.title-section {
 		text-align: center;
 	}
-
-	/*Song Content*/
-	.recently-played .content_section {
-		justify-content: flex-start;
+	.song_content {
+		margin-bottom: 25px;
+	}
+	.content_section.flex-display {
+		justify-content: space-around;
+	}
+	.create-for-u .song_content,
+	.popular-artist .song_content {
+		margin-right: 0;
 	}
 
 	/*Footer*/
 	/*Listen Song*/
 	.listen-song .like-song {
-		padding: 0;
+		display: none;
 	}
 	.listen-song .like-song i:first-child {
 		padding: 0 1px;
@@ -570,6 +587,11 @@ footer .footer_inner.flex-display {
 		color: white;
 		display: block;
 	}
+	.player_song .progress-bar::after {
+		content: "3:50";
+		padding-left: 10px;
+		padding-right: 0;
+	}
 	.player_song .progress-bar {
 		max-width: 80%;
 	}
@@ -581,4 +603,188 @@ footer .footer_inner.flex-display {
 	.right-controls-song {
 		padding-right: 5px;
 	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	/*Sidebar*/
+	.side-bar:hover {
+		width: 130px;
+		transition: width 1s ease-in-out;
+		-webkit-transition: width 1s ease-in-out;
+	}
+	/*Logo*/
+	.side-bar .inner_side-bar .logo .logo-small {
+		max-width: 60%;
+		min-width: 35px;
+	}
+
+	/*Content*/
+	/*Title Content*/
+	.content .title_content ul li:hover a::after,
+	.content .title_content ul .active a::after {
+		width: 70%;
+	}
+	.content .title_content ul li {
+		padding-bottom: 7px;
+		display: inline-block;
+	}
+
+	/*Footer*/
+	/*Listen Song*/
+	.listen-song .like-song {
+		display: inline-block;
+	}
+	/*Player Song*/
+	.player_song .control-section-song i,
+	.player_song .control-section-song .play {
+		display: inline-block;
+		font-size: 17px;
+		padding: 0 5px;
+	}
+	.player_song .progress-bar {
+		margin-top: 5%;
+	}
+	.player_song .progress-bar::before,
+	.player_song .progress-bar::after {
+		color: white;
+		display: inline-block;
+	}
+	.base-progress-bar {
+		width: 65%;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	/*Sidebar*/
+	.side-bar {
+		width: 120px;
+		padding: 0;
+	}
+	.side-bar:hover {
+		transition: none;
+		width: 120px;
+	}
+	.side-bar .inner_side-bar .menu,
+	.side-bar .inner_side-bar .playlist,
+	.side-bar .inner_side-bar .install-profile {
+		display: block;
+	}
+	/*Logo*/
+	.side-bar .inner_side-bar .logo {
+		padding: 0;
+	}
+	.side-bar .inner_side-bar .logo .logo-normal {
+		display: none;
+	}
+	.side-bar .inner_side-bar .logo .logo-small {
+		max-width: 70%;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/*Sidebar*/
+	.side-bar {
+		width: 180px;
+		padding-right: 5px;
+	}
+	.side-bar:hover {
+		transition: none;
+		width: 180px;
+	}
+
+	/*Logo*/
+	.side-bar .inner_side-bar .logo {
+		text-align: center;
+		padding: 5px 0;
+	}
+	.side-bar .inner_side-bar .logo .logo-small {
+		display: none;
+	}
+	.side-bar .inner_side-bar .logo .logo-normal {
+		width: 115px;
+		padding: 10px;
+		display: block;
+	}
+
+	/*Menu*/
+	.side-bar .inner_side-bar .menu .menu-list span {
+		display: initial;
+	}
+	.side-bar .inner_side-bar .menu .menu-list {
+		text-align: left;
+	}
+
+	/*Playlist*/
+	.playlist {
+		padding-left: 10px;
+	}
+	.playlist .title-playlist {
+		padding-bottom: 10px;
+		font-size: 14px;
+	}
+	.playlist .playlist_content .made-playlist .make-playlist {
+		text-align: left;
+		padding: 0;
+	}
+	.playlist .playlist_content .made-playlist .make-playlist span {
+		display: initial;
+	}
+	.made-playlist .new_list {
+		text-align: left;
+	}
+
+	/*Install and Profile*/
+	.install-profile {
+		padding-left: 5px;
+	}
+	/*Download App*/
+	.install-profile .download-app {
+		text-align: left;
+	}
+	.install-profile .download-app img {
+		width: 20px;
+	}
+	.install-profile .download-app span {
+		display: initial;
+	}
+	/*Profile*/
+	.install-profile .profile {
+		text-align: left;
+	}
+	.install-profile .profile span {
+		display: initial;
+	}
+
+	/*Content*/
+	/*Title section*/
+	.title-section {
+		text-align: left;
+	}
+	/*Song*/
+	.create-for-u .content_section.flex-display,
+	.popular-artist .content_section.flex-display {
+		justify-content: flex-start;
+	}
+	.create-for-u .song_content,
+	.popular-artist .song_content {
+		margin-right: 25px;
+	}
+
+	/*FOOTER*/
+	/*Player Song*/
+	.player_song .progress-bar {
+		margin-top: 1%;
+		max-width: 53%;
+	}
+	/*Right-control*/
+	.right-controls-song .progress-bar {
+		display: inline-block;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
