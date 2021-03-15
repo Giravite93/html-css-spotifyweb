@@ -468,6 +468,9 @@ footer .footer_inner.flex-display {
 	.side-bar:hover .inner_side-bar .install-profile {
 		display: block;
 	}
+	.side-bar:hover .hidden-arrow{
+		display: none;
+	}
 
 	/*Logo*/
 	.side-bar .inner_side-bar .logo {
@@ -483,6 +486,41 @@ footer .footer_inner.flex-display {
 		margin: auto;
 		padding: 5px 4px;
 	}
+
+	/*Hidden arrow*/
+	.hidden-arrow{
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.scroll-arrow {
+		width: 12px;
+		height: 12px;
+		transform: rotate(-45deg);
+		border-right: 2px solid white;
+		border-bottom: 2px solid white;
+		animation: arrow-wave 1s infinite;
+		animation-direction: alternate;
+		display:inline-block;
+	}
+	.scroll-arrow:nth-child(2){
+		animation-delay: .3s;
+	}
+	.scroll-arrow:last-child{
+		animation-delay: .6s;
+	}
+	@keyframes arrow-wave {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: .5;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	
 
 	/*Menu*/
 	.side-bar .inner_side-bar .menu .menu-list span {
@@ -603,6 +641,27 @@ footer .footer_inner.flex-display {
 	.right-controls-song {
 		padding-right: 5px;
 	}
+	.right-controls-song .fa-volume-up:hover {
+		position: relative;
+		display: inline-block;
+	}
+	.right-controls-song .fa-volume-up:hover .drop-volume{
+		display: none;
+		position: absolute;
+		top: -45px;
+		left: -58px;
+		transform: rotateZ(270deg);
+		z-index: 1;
+	}
+	.right-controls-song .fa-volume-up:hover .drop-volume,
+	.right-controls-song .fa-volume-up:hover .progress-bar	{
+		display: block;
+	}
+	.right-controls-song .fa-volume-up:hover .progress-bar{
+		width: 140px;
+		padding-left: 42px;
+	}
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -694,6 +753,10 @@ footer .footer_inner.flex-display {
 		transition: none;
 		width: 180px;
 	}
+	/*Hidden arrow*/
+	.side-bar .hidden-arrow{
+		display: none;
+	}
 
 	/*Logo*/
 	.side-bar .inner_side-bar .logo {
@@ -782,6 +845,10 @@ footer .footer_inner.flex-display {
 	/*Right-control*/
 	.right-controls-song .progress-bar {
 		display: inline-block;
+	}
+	.right-controls-song .fa-volume-up:hover .drop-volume,
+	.right-controls-song .fa-volume-up .drop-volume{
+		display: none;
 	}
 }
 
