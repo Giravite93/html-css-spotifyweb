@@ -1,6 +1,6 @@
 <h1>Progetto SpotifyWeb</h1>
 <h3>Riproduzione di una delle più famose Web App</h3>
-<p>Menu ed elementi reattivi all'hover e responsivo</p>
+<p><em>Menu ed elementi reattivi all'hover e responsivo</em></p>
 Linguaggi utilizzati:
 <p>
 <ul>
